@@ -1,0 +1,122 @@
+/* src/pages/Booking.css */
+
+.booking-page {
+    padding: 20px;
+  }
+  
+  .slots-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .slots-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .slots-table button {
+    padding: 5px 10px;
+    background-color: #4087c9;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .slots-table button:hover {
+    background-color: #4a97c4;
+  }
+  
+  .booking-confirmation {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #4CAF50;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    max-width: 90%;
+  }
+  
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  button[type="button"] {
+    background-color: #497cc0;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #544cc4;
+  }
+  
+  .contribute {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .contribute p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #113347;
+  }
+  
+  .contribute button {
+    background-color: #196e96;
+    border: none;
+    border-radius: 5px;
+    color: #e2eaec;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+    text-align: center;
+  }
+  
+  .contribute button:hover {
+    background-color: #183746;
+  }
+  

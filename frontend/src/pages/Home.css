@@ -1,0 +1,72 @@
+/* Apply background image to the entire page */
+body {
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif;
+    position: relative; /* Ensure relative positioning for the pseudo-element */
+    overflow: hidden; /* Prevent scrollbars from appearing */
+   
+}
+
+/* Pseudo-element for background image */
+body::before {
+    content: '';
+    position: fixed; /* Fix the image position relative to the viewport */
+    top: 0;
+    left: 0;
+    width: 40vw; /* Cover 40% of the viewport width */
+    height: 100vh; /* Cover 100% of the viewport height */
+    background-image: url('./homepage.jpg'); /* Path to your background image */
+    background-size: cover; /* Cover the area */
+    background-position: left top; /* Position the background image at the top left */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    z-index: -1; /* Place the pseudo-element behind the content */
+}
+
+/* Home page styling */
+.home {
+    padding: 20px;
+   
+    border-radius: 10px; /* Rounded corners for the container */
+    max-width: 1200px; /* Optional: Set a max width */
+    margin: 0 auto; /* Center the container horizontally */
+    position: relative; /* Ensure content is above the pseudo-element */
+    z-index: 1; /* Ensure the content is above the background image */
+}
+
+/* Headings and text */
+h1 {
+    text-align: center;
+    color: #85115e;
+}
+
+p {
+    text-align: center;
+    color: #72145e;
+}
+
+/* Services section */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.service {
+    background-color: hsl(331, 56%, 81%);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(105, 30, 83, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+}
+
+.service h2 {
+    color: #c73295;
+    margin-bottom: 10px;
+}
+
+.service p {
+    color: #9b1c86;
+}
