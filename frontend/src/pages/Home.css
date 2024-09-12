@@ -4,28 +4,32 @@ body {
     font-family: Arial, sans-serif;
     position: relative; /* Ensure relative positioning for the pseudo-element */
     overflow: hidden; /* Prevent scrollbars from appearing */
-   
 }
 
-/* Pseudo-element for background image */
+/* Pseudo-element for background images side by side */
 body::before {
     content: '';
     position: fixed; /* Fix the image position relative to the viewport */
     top: 0;
     left: 0;
-    width: 40vw; /* Cover 40% of the viewport width */
+    width: 100vw; /* Cover the entire viewport width */
     height: 100vh; /* Cover 100% of the viewport height */
-    background-image: url('./homepage.jpg'); /* Path to your background image */
-    background-size: cover; /* Cover the area */
-    background-position: left top; /* Position the background image at the top left */
+    
+    /* Multiple background images */
+    background-image: url('./homepage.jpg'),
+                      url('./homepage1.jpg'),
+                      url('./homepage2.jpg'); /* Path to your background images */
+    
+    background-size: 33.33vw 100vh; /* Each image covers a third of the viewport width, full height */
+    background-position: left top, center top, right top; /* Position the images side by side */
     background-repeat: no-repeat; /* Prevent image repetition */
+    
     z-index: -1; /* Place the pseudo-element behind the content */
 }
 
 /* Home page styling */
 .home {
     padding: 20px;
-   
     border-radius: 10px; /* Rounded corners for the container */
     max-width: 1200px; /* Optional: Set a max width */
     margin: 0 auto; /* Center the container horizontally */
@@ -36,12 +40,14 @@ body::before {
 /* Headings and text */
 h1 {
     text-align: center;
-    color: #85115e;
+    color: #500c3a;
+    font-style: italic;
 }
 
 p {
     text-align: center;
-    color: #72145e;
+    color: #13020b;
+    font-weight: bold;
 }
 
 /* Services section */
@@ -54,7 +60,7 @@ p {
 }
 
 .service {
-    background-color: hsl(331, 56%, 81%);
+    background-color: hsl(341, 59%, 87%);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(105, 30, 83, 0.1);
     padding: 20px;
@@ -63,10 +69,40 @@ p {
 }
 
 .service h2 {
-    color: #c73295;
+    color: #84118f;
     margin-bottom: 10px;
 }
 
 .service p {
     color: #9b1c86;
+}
+.gth{
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+}
+
+.gth-button {
+    background-color: #c9466e; /* Primary background color */
+    color: #ffffff; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 20px; /* Rounded corners */
+    padding: 12px 24px; /* Top & bottom padding, left & right padding */
+    font-size: 1em; /* Font size */
+    font-weight: bold; /* Make text bold */
+    text-transform: uppercase; /* Uppercase text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions for background color and scaling */
+    justify-content: center; 
+
+}
+
+.gth-button:hover {
+    background-color: #d65088; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+.gth-button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 2px rgba(204, 56, 125, 0.5); /* Custom focus outline */
 }

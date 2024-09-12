@@ -43,8 +43,8 @@ const Booking = () => {
 
   return (
     <div className="booking-page">
-      <h1>Book a Slot for {serviceName}</h1>
-      <p>Select an available time slot below:</p>
+      <h1>Are you free for {serviceName}</h1>
+      <p>Mark it up on your calender</p>
       
       <table className="slots-table">
         <tbody>
@@ -94,7 +94,7 @@ const Booking = () => {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="purpose">Instructions</label>
+                <label htmlFor="purpose">Special Instructions</label>
                 <input
                   type="text"
                   id="purpose"
@@ -109,6 +109,7 @@ const Booking = () => {
           </div>
         </div>
       )}
+      <br></br><br></br>
       <div className="contribute">
         <p>Want to explore more options?</p>
         <Link to="/home">
